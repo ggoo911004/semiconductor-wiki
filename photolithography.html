@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微影製程 (Photolithography) - 半導體知識庫</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2, h3 {
+            color: #3498db;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        h1 { border-bottom: 2px solid #3498db; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #2a2a2a;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        a.back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← 返回首頁 (Back to Index)</a>
+        
+        <h1>微影製程 (Photolithography)</h1>
+
+        <h2>1. 製程名稱與定義 (Process Overview)</h2>
+        <p>圖案化製程中，將設計好的圖案從光罩或倍縮光罩轉印到晶圓表面的光阻技術[cite: 6]。</p>
+        <p>基本技術要求包含：高解析度、高感光度、精準對準、低缺密度[cite: 6]。</p>
+
+        <h2>2. 核心機制與原理 (Core Mechanism)</h2>
+        <p>微影製程的核心在於透過光阻劑 (Photoresist, PR) 對特定波長光線的化學反應，結合光罩的遮蔽，將圖案精準定義在晶圓上。整個製程包含八個主要步驟[cite: 6]：</p>
+        <ol>
+            <li>清洗晶圓[cite: 6]</li>
+            <li>預烘烤 / 上底漆 (HMDS 六甲基二矽氮烷)[cite: 6]</li>
+            <li>光阻塗佈[cite: 6]</li>
+            <li>軟烘烤[cite: 6]</li>
+            <li>對準[cite: 6]</li>
+            <li>曝光[cite: 6]</li>
+            <li>曝光後烘烤[cite: 6]</li>
+            <li>顯影硬烘烤圖案檢查[cite: 6]</li>
+        </ol>
+
+        <h3>微影製程的四次烘烤機制[cite: 6]</h3>
+        <ul>
+            <li><span class="highlight">預烘烤：</span>去除吸附在晶圓上之水氣[cite: 6]。</li>
+            <li><span class="highlight">軟烘烤：</span>去除光阻內的大量溶劑，使液態轉變成固態[cite: 6]。</li>
+            <li><span class="highlight">曝光後烘烤：</span>消除駐波效應[cite: 6]。當溫度高於玻璃轉換溫度 (Tg) 時，光阻分子變得容易移動，可使過度曝光或曝光不足的分子重新排列，平滑駐波效應[cite: 6]。</li>
+            <li><span class="highlight">硬烘烤：</span>去除光阻內殘餘溶劑，增加光阻強度，並透過進一步之聚合改進光阻對後續蝕刻與離子佈植的抵抗力，同時增加附著力[cite: 6]。</li>
+        </ul>
+
+        <h2>3. 關鍵材料/試劑 (Key Materials & Reagents)</h2>
+        <h3>HMDS (六甲基二矽氮烷)</h3>
+        <p><strong>目的：</strong>增強附著力，防止光阻剝離[cite: 6]。</p>
+        <p><strong>化學機制：</strong>矽晶圓在經過清洗後，表面會形成親水性的二氧化矽 (SiO2) 並吸附帶有羥基 (-OH) 的水分子[cite: 6]。由於光阻劑多屬於疏水性的有機聚合物，HMDS 會與晶圓表面的羥基發生化學反應，將親水性表面轉化為疏水性的矽烷基 (-O-Si(CH3)3)[cite: 6]。此反應能消除表面水分，防止後續顯影或濕式蝕刻時光阻剝離 (Peeling) 或圖案傾倒[cite: 6]。</p>
+
+        <h2>4. 與其他製程的比較 (Comparison)</h2>
+        <h3>正光阻與負光阻之比較</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>比較項目</th>
+                    <th>正光阻[cite: 6]</th>
+                    <th>負光阻[cite: 6]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>聚合物</strong></td>
+                    <td>酚醛樹脂 (Novolac)[cite: 6]</td>
+                    <td>高分子薄膜 (聚異戊二烯橡膠)[cite: 6]</td>
+                </tr>
+                <tr>
+                    <td><strong>感光劑</strong></td>
+                    <td>溶解抑制劑[cite: 6]</td>
+                    <td>含 N3 基團之有機分子[cite: 6]</td>
+                </tr>
+                <tr>
+                    <td><strong>溶劑</strong></td>
+                    <td>醋酸鹽類 (醋酸型溶劑)[cite: 6]</td>
+                    <td>二甲苯[cite: 6]</td>
+                </tr>
+                <tr>
+                    <td><strong>特性與優勢</strong></td>
+                    <td>光分解感光劑且切斷交連，在鹼性液中溶解性變更佳；具備較高之解析度 (<3 μm)[cite: 6]。</td>
+                    <td>曝光之光阻變成交連之高分子，具備較佳之抗化學蝕刻能力[cite: 6]。</td>
+                </tr>
+                <tr>
+                    <td><strong>缺點</strong></td>
+                    <td>價格昂貴[cite: 6]。</td>
+                    <td>由於光阻膨脹使解析度較差；主要溶劑為二甲苯，有環境及安全因素疑慮[cite: 6]。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. 應用場景 (Applications)</h2>
+        <p>正光阻因具備高解析度優勢，是現今 IC 製程最常用的光阻材料，廣泛應用於對特徵尺寸 (Critical Dimension) 要求極度嚴苛的先進製程節點中[cite: 6]。</p>
+    </div>
+</body>
+</html>
