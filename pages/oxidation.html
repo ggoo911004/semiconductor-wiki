@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>氧化製程 (Oxidation) - 半導體知識庫</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2, h3 {
+            color: #3498db;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        h1 { border-bottom: 2px solid #3498db; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #2a2a2a;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        a.back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+        a.back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← 返回首頁 (Back to Index)</a>
+        
+        <h1>氧化製程 (Oxidation) 與熱處理</h1>
+
+        <h2>1. 製程名稱與定義 (Process Overview)</h2>
+        <p>氧化製程屬於半導體製造中的熱製程 (Thermal Processes)[cite: 6]。主要目的是在矽晶圓表面生長出一層二氧化矽 (SiO<sub>2</sub>) 薄膜，以提供絕緣、隔離，或作為後續製程的保護遮罩[cite: 6]。</p>
+        <p>核心化學反應式：Si + O<sub>2</sub> → SiO<sub>2</sub>（氧來自通入的氣體，矽來自基板，薄膜會向基板內部生長）[cite: 6]。</p>
+
+        <h2>2. 核心機制與設備 (Core Mechanism & Equipment)</h2>
+        <h3>高溫爐管 (Diffusion Furnace)</h3>
+        <p>加熱製程通常在高溫爐中進行。主要由石英和加熱元件構成，必須具備精確溫控與低微粒汙染的特性[cite: 6]。大部分零件採用熔合石英（單晶 SiO<sub>2</sub>），雖然高溫穩定但易碎且有金屬雜質（如鈉）風險[cite: 6]。</p>
+        
+        <h3>水平式 vs 垂直式爐管比較[cite: 6]</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>比較項目</th>
+                    <th>水平式 (Horizontal)</th>
+                    <th>垂直式 (Vertical)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>空間佔用</strong></td>
+                    <td>橫向 (Floor space) 需求大[cite: 6]</td>
+                    <td>縱向發展，水平佔地面積小[cite: 6]</td>
+                </tr>
+                <tr>
+                    <td><strong>溫度均勻度</strong></td>
+                    <td>中等 (易受水平兩端散熱影響)[cite: 6]</td>
+                    <td>佳 (軸向與徑向對稱性高)[cite: 6]</td>
+                </tr>
+                <tr>
+                    <td><strong>自動化程度</strong></td>
+                    <td>較低 (常需人工或簡易輔助)[cite: 6]</td>
+                    <td>高 (容易整合無塵室自動傳送)[cite: 6]</td>
+                </tr>
+                <tr>
+                    <td><strong>顆粒污染風險</strong></td>
+                    <td>碎屑易因重力掉落到直立晶圓上[cite: 6]</td>
+                    <td>平放結構受干擾風險較低[cite: 6]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>氧化生長速率 (Oxidation Rate) 影響變數[cite: 6]</h3>
+        <ul>
+            <li>溫度 (Temperature)[cite: 6]</li>
+            <li>氧化環境化學 (濕式或乾式 / wet or dry)[cite: 6]</li>
+            <li>壓力 (Pressure)[cite: 6]</li>
+            <li>矽摻雜物質 (Silicon dopant material)[cite: 6]</li>
+            <li><span class="highlight">晶格優選取向 (Wafer orientation)：</span>氧化速率大小依序為 (111) > (110) > (100)[cite: 6]。</li>
+        </ul>
+
+        <h2>3. 關鍵製程步驟與前處理 (Pre-treatment)</h2>
+        <p>在進行高溫氧化前，必須先進行嚴格的晶圓清洗，以去除微粒和有機物：</p>
+        <ul>
+            <li><strong>SC-1 (Standard Clean-1) 清洗液：</strong>NH<sub>4</sub>OH : H<sub>2</sub>O<sub>2</sub> : H<sub>2</sub>O[cite: 6]</li>
+            <li><strong>食人魚溶液：</strong>H<sub>2</sub>SO<sub>4</sub> : H<sub>2</sub>O<sub>2</sub> : H<sub>2</sub>O[cite: 6]</li>
+            <li><strong>氧化物蝕刻：</strong>HF : H<sub>2</sub>O 用於蝕刻原生 SiO<sub>2</sub>[cite: 6]</li>
+        </ul>
+
+        <h2>4. 應用場景與氧化層種類 (Applications)</h2>
+        <p>通常以 100~200 片晶圓為批量進行製造[cite: 6]，生成的氧化層依功能可分為：</p>
+        <ul>
+            <li><strong>擴散遮蔽層 (Diffusion Masking Oxide)：</strong>通常採用濕氧化生成較厚的薄膜，如場區氧化層 (Field Oxide)，用於元件間的絕緣隔離，或作為後續離子佈植與摻雜的阻擋層[cite: 6]。</li>
+            <li><strong>遮罩氧化層 (Screen Oxide)：</strong>通常採用乾氧化生成較薄的薄膜，如電晶體的閘極氧化層 (Gate Oxide) 或屏蔽氧化層[cite: 6]。</li>
+            <li><strong>襯墊氧化層 (Pad Oxide)：</strong>作為基板與氮化矽 (SiN) 之間的緩衝層，避免基板因 SiN 的強大張力 (>10<sup>10</sup> dyn/cm) 而受到破壞[cite: 6]。</li>
+        </ul>
+    </div>
+</body>
+</html>
