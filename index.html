@@ -35,12 +35,19 @@
             color: #4fc3f7;
             text-decoration: none;
             font-size: 1.1em;
+            display: inline-block;
+            margin-bottom: 8px;
         }
         a:hover {
             text-decoration: underline;
         }
         ul {
             list-style-type: square;
+        }
+        .placeholder {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -54,8 +61,10 @@
         <section class="note-section">
             <h2>最新製程筆記</h2>
             <ul>
-                <li><a href="./pages/photolithography.html">微影製程 (Photolithography) 與光阻機制</a></li>
-                <!-- 未來新增的頁面連結將會自動附加於此 -->
+                <!-- 根據製程順序排列 -->
+                <li><a href="./pages/wafer-manufacturing.html">1. 晶圓製造 (Wafer Manufacturing) 與長晶技術</a></li>
+                <li><a href="./pages/photolithography.html">2. 微影製程 (Photolithography) 與光阻機制</a></li>
+                <li><span class="placeholder">3. (預留位置) CMP 化學機械平坦化製程...</span></li>
             </ul>
         </section>
     </div>
